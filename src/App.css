@@ -1,0 +1,109 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.App{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  #weather-back-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .left{
+    width: 75%;
+    position: relative;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    .weather-card{
+      padding: 1.75rem 1.5rem;
+      border-radius: 1.25rem;
+      backdrop-filter: blur(1rem);
+      width: 30%;
+      height: 290px;
+      min-width: max-content;
+      background-color: #4342422d;
+      left: 1.5rem;
+      bottom: 2rem;
+      box-shadow: 0rem .35rem 1.5rem 0 rgba(0,0,0, 0.3);
+
+      .horizontal-line{
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin: .75rem 0;
+      }
+    }
+
+    .info-card{
+      height: 290px;
+      padding: 2rem 1.5rem;
+      backdrop-filter: blur(1rem);
+      border-radius: 1.25rem;
+      box-shadow: 0 .35rem 1.5rem 0 rgba(0,0,0, 0.3);
+      justify-content: space-between;
+      align-items: center;
+      img{
+        height: 80px;
+      }
+    }
+  }
+
+  .right{
+    position: relative;
+    width: 25%;
+    padding: 2rem 3%;
+    border-left: 1px solid #434242;
+    backdrop-filter: blur(1rem);
+    background-color: #43424259;
+
+    .search-area{
+      height: 90%;
+      
+      #searchbar{
+        width: 100%;
+        border-radius: 5rem;
+        background-color: white;
+        border: 1px solid #434242;
+        padding: .75rem 1rem;
+        color: black;
+      }
+
+      .search-history{
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
+
+    .date{
+      padding: .75rem 0;
+    }
+  }
+}
+
+.flex{display: flex;}
+.flex-d-col{display: flex; flex-direction: column;}
+
+.text-right{text-align: right;}
+
+.bold{font-weight: bold;}
+
+.font-20{font-size: 1.25rem}
+.font-26{font-size: 1.625rem}
+.font-32{font-size: 2rem;}
