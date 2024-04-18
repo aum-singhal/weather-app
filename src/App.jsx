@@ -80,8 +80,8 @@ function App() {
           <div className="search-history">
             {searchHistory?.length > 0 && 
               searchHistory.map((item, index)=>{
-                return <div className="search-history-item" key={index}>
-                  <img src={history} alt="" /> {item}
+                return <div className="search-history-item flex" key={index}>
+                  <img src={history} height={"30"} alt="" /> {item}
                 </div>
               })
             }

@@ -13,7 +13,8 @@ export const getWeather = (weather, setCurrentWeather, setLocation, setImage) =>
   axios.post(
     `http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${weather}`, 
     {
-      headers: { 'Content-Type': 'application/json'}
+      headers: { 'Content-Type': 'application/json',
+    'cors': true}
     }
   ).then(res => {
     setCurrentWeather(res.data.current)
